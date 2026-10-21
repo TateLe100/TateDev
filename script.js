@@ -99,3 +99,37 @@ $(function () {
     }
   });
 });
+
+/* --- Screenshot viewer ---------------------------------- */
+/* Without <dialog> support (or without JS) the thumbnails are plain links
+   to the image, so they still work. */
+
+$(function () {
+  var dlg = document.getElementById("lightbox");
+  if (!dlg || typeof dlg.showModal !== "function") {
+    return;
+  }
+
+  var $img = $("#lightbox-img");
+  var $title = $("#lightbox-title");
+
+  $(".shot").on("click", function (e) {
+    e.preventDefault();
+    var $a = $(this);
+    $img.attr({ src: $a.attr("href"), alt: $a.data("alt") });
+    $title.text($a.data("title"));
+    dlg.showModal();
+    dlg.scrollTop = 0;
+  });
+
+  $("#lightbox-close").on("click", function () {
+    dlg.close();
+  });
+
+  // Clicking the dimmed area outside the image closes it.
+  $(dlg).on("click", function (e) {
+    if (e.target === dlg) {
+      dlg.close();
+    }
+  });
+});

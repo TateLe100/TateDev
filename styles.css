@@ -226,6 +226,9 @@ a {
 }
 
 @media (max-width: 59.99rem) {
+  .rail__foot {
+    display: none;
+  }
   .nav {
     display: none;
   }
@@ -248,13 +251,11 @@ a {
 
 .hero {
   padding: 4rem 0 3.5rem;
-  max-width: 34ch;
 }
 
 @media (min-width: 60rem) {
   .hero {
     padding: 7rem 0 5rem;
-    max-width: 20ch;
   }
 }
 
@@ -262,7 +263,7 @@ a {
   margin: 0;
   font-family: var(--display);
   font-weight: 800;
-  font-size: clamp(2.25rem, 6.4vw, 4.75rem);
+  font-size: clamp(2.1rem, 5.6vw, 4rem);
   line-height: 1.02;
   letter-spacing: -0.035em;
   text-wrap: balance;
@@ -582,4 +583,130 @@ a {
   color: var(--ink-faint);
   font-size: 0.9375rem;
   font-style: italic;
+}
+
+/* ----------------------------------------------------------
+   Project screenshots
+   ---------------------------------------------------------- */
+
+.shots {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0 0 0.25rem;
+  display: flex;
+  gap: 0.85rem;
+  overflow-x: auto; /* swipeable row on phones */
+  scroll-snap-type: x proximity;
+}
+
+.shots li {
+  flex: 0 0 74%;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 38rem) {
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+  }
+  .shots li {
+    flex: initial;
+  }
+}
+
+.shot {
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--paper-deep);
+  cursor: zoom-in;
+  transition: border-color 0.2s ease;
+}
+.shot:hover {
+  border-color: var(--ink);
+}
+
+.shot__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left; /* tall shots show their top; click for the full view */
+}
+
+.shot__cap {
+  display: block;
+  padding: 0.5rem 0.7rem;
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* ----------------------------------------------------------
+   Screenshot viewer
+   ---------------------------------------------------------- */
+
+.lightbox {
+  width: fit-content;
+  max-width: min(72rem, 94vw);
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  overflow: auto;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.lightbox::backdrop {
+  background: rgba(20, 31, 26, 0.72);
+}
+
+.lightbox__bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.lightbox__title {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.lightbox__close {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 0.3rem 0.85rem;
+  background: none;
+  color: var(--ink-soft);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+.lightbox__close:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.lightbox__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
