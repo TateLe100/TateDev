@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tate — .NET Developer</title>
+    <meta
+      name="description"
+      content="Tate is a C#/.NET developer in Lincoln, Nebraska, building internal web applications and full-stack side projects."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="shell">
+      <!-- ───────────── left rail ───────────── -->
+      <header class="rail">
+        <div class="rail__top">
+          <a class="mark" href="#top">
+            <span class="mark__name">Tate Le</span>
+            <span class="mark__role">.NET developer</span>
+          </a>
+
+          <button
+            class="menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav"
+          >
+            <span class="menu__bar"></span>
+            <span class="menu__label">Menu</span>
+          </button>
+        </div>
+
+        <nav class="nav" id="nav" aria-label="Sections">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p class="rail__foot">Lincoln, Nebraska</p>
+      </header>
+
+      <!-- ───────────── content ───────────── -->
+      <main class="main" id="main">
+        <section class="hero" id="top">
+          <h1 class="hero__line">
+            <span class="rise">C# developer</span>
+            <span class="rise">in Lincoln,</span>
+            <span class="rise">Nebraska.</span>
+          </h1>
+          <p class="hero__sub rise">
+            C#, ASP.NET Core, and SQL by day. React and TypeScript on nights and
+            weekends, because I would rather understand the whole system than
+            half of it.
+          </p>
+        </section>
+
+        <section class="section" id="about">
+          <h2 class="section__head">About</h2>
+          <div class="prose">
+            <p>
+              I'm a developer with the State of Nebraska, where I build and
+              maintain the web applications our HR teams use every day. Most of
+              my work lives in ASP.NET Core and Blazor, sitting on top of SQL
+              Server and Entity Framework, and a lot of it comes down to the
+              same question: what is the person on the other end actually trying
+              to get done?
+            </p>
+            <p>
+              Outside of work I'm usually on a basketball court, in the gym, or
+              out on a golf course I've only recently gotten hooked on. I'm an
+              outgoing person who likes being around people, so time with family
+              and friends is where most of the rest of it goes. Golf has been a
+              useful lesson in patience, which turns out to be a transferable
+              skill.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="work">
+          <h2 class="section__head">Work</h2>
+
+          <article class="role">
+            <div class="role__meta">
+              <p class="role__where">State of Nebraska</p>
+              <p class="role__when">Current</p>
+            </div>
+            <div class="prose">
+              <p>
+                I design, build, and maintain ASP.NET Core and Blazor
+                applications supporting HR operations. That includes Active
+                Directory integration for user and access management, background
+                job processing, and the Razor and Bootstrap interfaces staff
+                work in all day.
+              </p>
+              <p>
+                I started code reviews on our team to catch problems before they
+                reach deployment, and I spend a good share of my week tracing
+                issues across the database, the backend, and the UI to find
+                where something actually broke.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section class="section" id="projects">
+          <h2 class="section__head">Projects</h2>
+          <p class="section__intro">
+            Things I build on my own time to get better at the front end.
+          </p>
+
+          <ul class="projects">
+            <li class="project">
+              <div class="project__head">
+                <h3 class="project__title">
+                  <a
+                    href="https://github.com/TateLe100"
+                    target="_blank"
+                    rel="noopener"
+                    >Reactivities</a
+                  >
+                </h3>
+                <p class="project__tag">Full stack</p>
+              </div>
+              <p class="project__body">
+                A social app where people create and manage activities, keep an
+                account, and connect through friend requests. React and Material
+                UI on the front, a C# ASP.NET Core backend built on Clean
+                Architecture behind it.
+              </p>
+              <p class="project__stack">
+                React · Material UI · C# · ASP.NET Core · Clean Architecture
+              </p>
+            </li>
+
+            <li class="project">
+              <div class="project__head">
+                <h3 class="project__title">
+                  <a
+                    href="https://github.com/TateLe100"
+                    target="_blank"
+                    rel="noopener"
+                    >BookTracker</a
+                  >
+                </h3>
+                <p class="project__tag">In progress</p>
+              </div>
+              <p class="project__body">
+                A reading tracker that saves books, remembers what page you're
+                on, and lets you log entries with a page range and a short
+                summary so you actually retain what you read. Book data comes
+                from the Open Library API, called straight from the client.
+              </p>
+              <p class="project__stack">
+                React · TypeScript · Vite · ASP.NET Core Web API · EF Core
+              </p>
+            </li>
+
+            <li class="project">
+              <div class="project__head">
+                <h3 class="project__title">
+                  <a
+                    href="https://github.com/TateLe100"
+                    target="_blank"
+                    rel="noopener"
+                    >Journal App</a
+                  >
+                </h3>
+                <p class="project__tag">Full stack</p>
+              </div>
+              <p class="project__body">
+                A journaling app with entry dates, mood tracking, and full
+                create, read, update, and delete support. Built to practice
+                wiring a modern front end onto an API I wrote myself.
+              </p>
+              <p class="project__stack">
+                Next.js · ASP.NET Core Web API · EF Core · SQL Server
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="section" id="skills">
+          <h2 class="section__head">Skills</h2>
+
+          <dl class="skills">
+            <div class="skills__row">
+              <dt>Languages</dt>
+              <dd>C#, SQL, JavaScript, TypeScript, HTML, CSS</dd>
+            </div>
+            <div class="skills__row">
+              <dt>Backend</dt>
+              <dd>
+                ASP.NET Core, ASP.NET MVC, Blazor Server, Entity Framework Core,
+                REST APIs, Hangfire
+              </dd>
+            </div>
+            <div class="skills__row">
+              <dt>Frontend</dt>
+              <dd>React, Next.js, Razor, jQuery, Bootstrap, Tailwind CSS</dd>
+            </div>
+            <div class="skills__row">
+              <dt>Data</dt>
+              <dd>SQL Server, LINQ, relational data modeling, migrations</dd>
+            </div>
+            <div class="skills__row">
+              <dt>Tools</dt>
+              <dd>Git, Visual Studio, Active Directory, Power BI, OnBase</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="section section--last" id="contact">
+          <h2 class="section__head">Contact</h2>
+          <p class="contact__lead">
+            I'm always up for talking about .NET, front-end work, or a project
+            worth building.
+          </p>
+
+          <div class="contact__actions">
+            <a class="link-btn" href="mailto:you@example.com"
+              >you@example.com</a
+            >
+            <button class="copy" type="button" data-email="you@example.com">
+              Copy email
+            </button>
+          </div>
+
+          <p class="contact__links">
+            <a
+              href="https://github.com/TateLe100"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/your-handle"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="resume.pdf">Resume</a>
+          </p>
+
+          <p class="colophon">Built by hand with HTML, CSS, and jQuery.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
